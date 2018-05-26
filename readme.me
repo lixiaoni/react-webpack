@@ -1,0 +1,19 @@
+(1)局部安装Webpack,执行命令：
+npm install webpack --save-dev
+(2)安装React,--save 命令用于将包添加至 package.json 文件,执行命令:
+npm install react react-dom --save-dev
+(3)安装babel插件,babel插件是webpack需要的加载器,如果没有这几个加载器我们的jsx语法，和es2015语法就会报错。
+npm install babel-loader babel-core babel-preset-es2015 babel-preset-react --save-dev
+
+
+entry: 指定打包的入口文件 main.js。
+output：配置打包结果，path定义了输出的文件夹，filename则定义了打包结果文件的名称。
+devServer：设置服务器端口号为 8181，端口后你可以自己设定 。
+module：定义了对模块的处理逻辑，这里可以用loaders定义了一系列的加载器，以及一些正则。当需要加载的文件匹配test的正则时，就会调用后面的loader对文件进行处理，这正是webpack强大的原因。
+
+webpack-dev-server允许我们可以把本地项目跑在像nginx那样的web服务器上，更重要的是我们可以在package.json文件内定义scripts，同时修改webpack的配置文件来达到自动刷新的效果。
+安装webpack-dev-server执行命令:
+npm install webpack-dev-server --save-dev
+
+
+
