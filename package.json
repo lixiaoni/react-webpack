@@ -1,7 +1,7 @@
-{
+﻿{
   "name": "yangbiaoit",
-  "version": "1.0.0",
-  "description": "��¼ webpack4.x ��� react�ĳ���ʹ��",
+  "version": "1.0.1",
+  "description": "记录webpack4.x + react等相关使用",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
