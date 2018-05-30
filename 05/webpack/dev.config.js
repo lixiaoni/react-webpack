@@ -8,6 +8,7 @@ const webpackFile = require("./file.config");//一些路径配置
 let config = merge(baseWebpackConfig, {
     /*设置开发环境*/
     mode: 'development',
+    Mock: true,
     output: {
         path: path.resolve(webpackFile.devDirectory),
         filename: 'js/[name].js',
