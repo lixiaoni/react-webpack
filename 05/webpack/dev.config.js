@@ -4,6 +4,7 @@ const merge = require('webpack-merge');//webpack配置文件合并
 const path = require("path");
 const baseWebpackConfig = require("./base.config");//基础配置
 const webpackFile = require("./file.config");//一些路径配置
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let config = merge(baseWebpackConfig, {
     /*设置开发环境*/
@@ -33,9 +34,13 @@ let config = merge(baseWebpackConfig, {
                 ],
                 exclude: [
                     path.resolve(__dirname, "../node_modules")
-                ],
-            }
-        
+                ]
+            },
+            {
+                test: /\.(css|less)$/,
+                //localIdentName=[name]__[local]___[hash:base64:5]
+                loader: 'style-loader!css-loader!less-loader?modules&importLoaders=1&localIdentName=[local]'
+            },
         ]
     },
     /*设置api转发*/

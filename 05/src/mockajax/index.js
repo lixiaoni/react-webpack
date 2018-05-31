@@ -5,7 +5,8 @@ Mock.mock(
     config.userInfo, {
         "result": true,
         "msg": '',
-        "data|20": [{
+        "data|5": [{
+            "id": '@guid',
             "userName": '@name', //模拟名称
             "age|1-100": 100, //模拟年龄(1-100)
             "color": "@color", //模拟色值
