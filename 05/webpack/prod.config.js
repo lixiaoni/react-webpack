@@ -18,7 +18,7 @@ let config = merge(baseWebpackConfig, {
         /*设置热更新*/
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
+            'process.env.NODE_ENV': JSON.stringify('production')
         }),
     ],
     module: {
